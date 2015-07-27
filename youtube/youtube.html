@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="video" id="M7lc1UVf-VE"></div>
+	<div class="video" id="DGnX2TvFCKw"></div>
+	<div class="video" id="fSABqvMETVI"></div>
+	<div class="video" id="jbzsf6Z8mNU"></div>
+	<div class="video" id="4y2Fas6OAr4"></div>
+
+	<script>
+		var items = document.getElementsByClassName('video'),
+    	len, i;
+    	
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      
+      function onYouTubeIframeAPIReady() {
+      	var player= [];
+for (i = 0, len = items.length; i < len; i++) {
+  console.log(items[i].id);
+
+      var player;
+      var liga =String(items[i].id);
+  
+
+        player[i] = new YT.Player(items[i], {
+          videoId: liga
+         
+        });
+    }
+      }
+
+      
+    </script>
+
+
+</body>
+</html>
